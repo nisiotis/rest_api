@@ -16,14 +16,3 @@ class ModelTestCase(TestCase):
 
 
 
-    def test_model_can_create_a_book(self):
-
-        """Test the book model can create a book."""
-
-        old_count = Book.objects.count()
-
-        self.book.save()
-
-        new_count = Book.objects.count()
-
-        self.assertNotEqual(old_count, new_count)
